@@ -4,27 +4,51 @@
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><h2>Wiki Index</h2></a>
+    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+    </button>
     <div id="navbarSupportedContent" role="navigation">
         <form class="form-inline my-2 my-lg-0" >
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
             <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
         </form>
+    </div>-->
+
+    {% if not request.user.is_authenticated %}
+    <div class="login">
+        <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a>
     </div>
+
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <div class="logout">
+        <a logout_redirect href="{% url 'wiki:logout' %}"  class="btn btn-danger">Logout</a>
+    </div>
+    {% endif %}
+    
 </nav>
+
+
 <div class="title">
 </div>
 {% if pages %}
-<div class="container">
-    <div class="col col-sm-4 col-lg-4">
-            <ul>
-                {% for page in pages %}
-                <li>
-                    <a href="{% url 'wiki:detail' page.id %}">{{ page.title }}</a>
-                </li>
-                {% endfor %}
-            </ul>
-    </div>
+<div class="wikihome">
+    <ul>
+        {% for page in pages %}
+        <li>
+            <a href="{% url 'wiki:detail' page.id %}">{{ page.title }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<div class="wikihome">
+    <ul>
+        <li>
+            <a href="{% url 'wiki:upload' %}">upload</a>
+        </li>
+    </ul>
 </div>
 {% endif %}
  
-{% endblock content %}
+
+{% endblock content %} 

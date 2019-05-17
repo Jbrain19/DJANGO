@@ -7,28 +7,51 @@ h2{text-align: center; margin: 10px 0px 10px 0px;
     font-family: sans-serif;
    }
 
+h3{margin: 10px 0px 10px 10px} 
+
+/*navigation*/
 nav{margin: 5px 0px 0px 0px}
 
 .title{ background-color: aqua;
         height: 20px; margin: 0px 0px 20px 0px;}
 
+.logout{margin: 0px 0px 0px 10px;}
+.login{margin: 0px 0px 0px 10px;}
 
-.container{margin: 0px 100px 0px 200px; 
+
+
+.wikihome{margin: 0px 100px 10px 300px; 
     border: 1px solid black; 
     font-family: sans-serif;
     width: 600px;
-    background-color: rgba(247, 238, 238, 0.87);}
+    background-color: rgba(247, 238, 238, 0.87);
+    }
+  
+ul{list-style: none;}
 
 input{margin: 10px 0px 5px 50px; }
 
-.text{margin: 20px 50px 0px 50px; /*border: 1px solid purple*/
+/*content page*/
+.text{margin: 20px 80px 10px 80px; /*border: 1px solid purple*/
         border:1px solid black;}
 
+.home{margin:0px 5px 0px 10px; float: right;}
+.edit{margin: 0px 60px 0px 5px; float: right;}  
+
+
+  /*text editting page*/      
 textarea{margin: 0px 0px 10px 50px;
             width: 80%; height: 50%;
             text-align: left; padding: 0px;}
 
 button{text-decoration: none;}
 
+.textedit{margin: 0px 10px 0px 10px ; width: 20px}
 
 
+/*login/logout page*/
+.loginpage{margin: 10px 0px 0px 10px; background:rgba(247, 238, 238, 0.87); border: 1px solid black;
+    width: 500px; padding: 10px;}
+
+/*upload page*/
+.fileup{margin: 10px 100px 0px 100px }

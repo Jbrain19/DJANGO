@@ -1,8 +1,13 @@
 {% extends 'wiki/base.html' %}
+{% load static %}
 
 {% block content %}
-    {% block contentTitle %}<h1>{{page_name}}</h1>{% endblock %}
+    {% block contentTitle %}
+        <h2 class="text-primary">wiki Index</h2> <img src="{% static "wiki/images/pinkbubble.jpg" %}/>
+    {% endblock %}
+    {% if pages %}
     <p>This page does not exist</p>
+
     <a class="btn btn-primary"
         href="{% url 'wiki:edit_page' page_name %}">
         create?

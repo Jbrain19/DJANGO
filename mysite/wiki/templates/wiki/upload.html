@@ -1,0 +1,59 @@
+{% extends 'wiki/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#"><h2>Wiki Index</h2></a>
+
+    {% if not request.user.is_authenticated %}
+    <div class="login">
+        <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a>
+    </div>
+
+    {% endif %}
+    {% if request.user.is_authenticated %}
+    <div class="logout">
+        <a logout_redirect href="{% url 'wiki:logout' %}"  class="btn btn-danger">Logout</a>
+    </div>
+    {% endif %}
+    
+</nav>
+<div class="title">
+</div>
+
+
+<div class="fileup">
+    {% block ContentTitle %}Uploaded Files{% endblock %}
+
+    <section>
+
+        <form method='POST' enctype='multipart/form-data' action="{% url 'wiki:upload' %}">
+            {% csrf_token %}
+            {{form}}
+            <input type='submit' value="Upload">
+        </form>
+
+    </section>
+
+    <hr />
+</div>
+    <section>
+        {% if files %}
+        <ul>
+            {% for file in files %}
+            <li><a href="{{file.upload.url}}">{{file.upload.name}}</a></li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No uploaded files</p>
+        {% endif %}
+    </section>
+
+    <div class="fileupload-home">
+        <a class="btn btn-primary" href="{% url 'wiki:index' %}">
+            home
+        </a>
+
+{% endblock %}

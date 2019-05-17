@@ -1,28 +1,29 @@
 {% extends 'wiki/base.html' %}
 {% load static %}
 {% block content %}
-    {% block contentTitle %} Edit {{page_name}} {% endblock %}
-    <header><h3>{{page_name}}</h3></header>
-
+{% block contentTitle %}
+<header>
+    <h3> Editing {{page_name}}</h3>
+</header>
+{% endblock %}
+<div class="textedit">
     <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
-    <script>tinymce.init({selector:'#id_content', plugin: 'autolink'});</script>
+    <script>tinymce.init({ selector: '#id_content', plugin: 'autolink' });</script>
 
     <form method="POST" action="{% url 'wiki:save_page' page_name %}">
 
-    {% csrf_token %}
+        {% csrf_token %}
         <textarea id="id_content" name="content" row="10" cols="40">
 {{content}}
         </textarea>
-        <div>
-            <input type="submit" value="Save">
-        
+</div>
+        <input type="submit" value="Save"> <!--button to save edited text-->
+
     </form>
 
-            <a class="btn btn-danger"
-                href="{% url 'wiki:detail' page_name %}">
-                Cancel
-            </a>
-        
-</div>
-{% endblock %}
+    <a class="btn btn-danger" href="{% url 'wiki:detail' page_name %}">
+        Cancel
+    </a>
 
+
+{% endblock %}
