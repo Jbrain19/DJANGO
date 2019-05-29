@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{% url 'wiki:index' %}">
         <h2>Wiki Index</h2>
     </a>
 
@@ -30,17 +30,22 @@
     {{page.content }}
 </div>
 
-
+<!--Allows a user to edit the text-->
 <div class="edit">
-    <a class="btn btn-primary" href="{% url 'wiki:edit_page' page.id %}">
+    <a class="btn btn-primary" href="{% url 'wiki:edit_page' page.id %}"> 
         edit
     </a>
 </div>
+<!--Takes a user back home, to the index page-->
 <div class="home">
     <a class="btn btn-primary" href="{% url 'wiki:index' %}">
         home
     </a>
 </div>
 
+<footer class="footer">
+  {{ Counter.pk | safe}}
+  <div class="text-center">This Page has been visited {{page.counter}} times.</div>
+</footer>
 
 {% endblock %}

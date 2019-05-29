@@ -4,21 +4,13 @@
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#"><h2>Wiki Index</h2></a>
-    <!--<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="navbarSupportedContent" role="navigation">
-        <form class="form-inline my-2 my-lg-0" >
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" >
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" >Search</button>
-        </form>
-    </div>-->
 
+    <!--If not logged in, will display Login button. Used to take you to the login in page, where it will require a user name and password-->
     {% if not request.user.is_authenticated %}
     <div class="login">
-        <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a>
+        <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a> 
     </div>
-
+    <!--if already logged in, will display logout button. Once pressed will logout user and redirect them to the login page-->
     {% endif %}
     {% if request.user.is_authenticated %}
     <div class="logout">
@@ -32,23 +24,32 @@
 <div class="title">
 </div>
 {% if pages %}
+
+<!--Takes you to the wiki pages created within the admin-->
 <div class="wikihome">
     <ul>
         {% for page in pages %}
         <li>
-            <a href="{% url 'wiki:detail' page.id %}">{{ page.title }}</a>
+            <a href="{% url 'wiki:detail' page.id %}">{{ page.title }}</a> 
         </li>
         {% endfor %}
     </ul>
 </div>
+
+<!--Takes a user to the file upload page-->
 <div class="wikihome">
     <ul>
         <li>
-            <a href="{% url 'wiki:upload' %}">upload</a>
+            <a href="{% url 'wiki:upload' %}">upload</a> 
         </li>
     </ul>
 </div>
 {% endif %}
- 
+
+
+<footer class="footer">
+<p class="text-center">The browser used to load this page is {{ request.META.HTTP_USER_AGENT}}</p> <!--Used to detect and display users browser being used-->
+</footer>
 
 {% endblock content %} 
+ 

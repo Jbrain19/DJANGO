@@ -6,6 +6,17 @@ from django.contrib.auth.decorators import login_required
 from .models import Page, UserFileUpload
 from .forms import UploadFileForm 
 
+import logging
+
+# Get an instance of a logger
+logger = logging.getLogger(__name__)
+logger.info("custom logger started")
+def my_view(request, arg1, arg):
+    ...
+    if bad_mojo:
+        # Log an error message
+        logger.error('Something went wrong!')
+
 
 
 class IndexView(generic.ListView):
@@ -26,7 +37,7 @@ def view_page(request, pk):
     except Page.DoesNotExist:
         return render (request, "wiki/create_page.html", {"page_name": pk}) 
 
-@login_required(login_url='wiki:login')
+@login_required(login_url='wiki:login') # Makes sure a login (if not already) is required before continuining
 def edit_page(request, pk):
     try:
         page = Page.objects.get(pk=pk)
@@ -38,7 +49,8 @@ def edit_page(request, pk):
                         'page_name':pk,
                         'content': content
                     })
-@login_required(login_url='wiki:login')
+
+@login_required(login_url='wiki:login') # Makes sure a login (if not already) is required before continuining. Will display login page when user trys to save eddited content
 def save_page(request, pk):
     content = request.POST["content"] 
     try: 
@@ -47,8 +59,9 @@ def save_page(request, pk):
     except Page.DoesNotExist:
         page =  Page(title=pk, content=content)
     page.save()
-    return redirect ('wiki:detail', pk=pk)
+    return redirect ('wiki:detail', pk=pk) #Makes sure that if task fails it will redirect to the content page (detail)
 
+@login_required(login_url='wiki:login') # Makes sure a login (if not already) is required before continuining
 def upload_file(request):
     context = {}
     if request.method == 'POST':
@@ -60,3 +73,4 @@ def upload_file(request):
     context['form'] = form
     context['files'] = UserFileUpload.objects.all().order_by('upload')
     return render(request, 'wiki/upload.html', context)
+

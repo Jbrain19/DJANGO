@@ -1,0 +1,487 @@
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Watching for file changes with StatReloader
+Waiting for apps ready_event.
+Apps ready_event triggered. Sending autoreload_started signal.
+Watching dir D:\L3 Year 2\unit 27\DJANGO practice\mysite\locale with glob **/*.mo.
+Watching dir D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\admin\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\auth\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\contenttypes\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\sessions\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\messages\locale with glob **/*.mo.
+Watching dir C:\Program Files (x86)\Python36-32\lib\site-packages\django\contrib\staticfiles\locale with glob **/*.mo.
+(0.000) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+(0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\urls\resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\urls\resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': ''}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /
+"GET / HTTP/1.1" 404 2153
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\urls\resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\core\handlers\base.py", line 100, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\urls\resolvers.py", line 558, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<URLResolver <module 'wiki.urls' from 'D:\\L3 Year 2\\unit 27\\DJANGO practice\\mysite\\wiki\\urls.py'> (wiki:wiki) 'wiki/'>], [<URLResolver <URLPattern list> (admin:admin) 'admin/'>], [<URLPattern '^media\/(?P<path>.*)$'>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 829, in _resolve_lookup
+    current = current[bit]
+TypeError: 'URLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 837, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'URLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 843, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Python36-32\lib\site-packages\django\template\base.py", line 850, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in <URLResolver <URLPattern list> (admin:admin) 'admin/'>
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2204
+File D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py. is_changed: False, is_new: True
+File D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py previous mtime: None, current mtime: 1558522814.0
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py notified as changed. Signal results: [(<function translation_file_changed at 0x047064F8>, None)].
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 2153
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2204
+"GET /wiki HTTP/1.1" 301 0
+Internal Server Error: /wiki/
+Traceback (most recent call last):
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 445, in parse
+    raise self.error(token, 'Empty variable tag on line %d' % token.lineno)
+django.template.exceptions.TemplateSyntaxError: Empty variable tag on line 58
+"GET /wiki/ HTTP/1.1" 500 144769
+Internal Server Error: /wiki/
+Traceback (most recent call last):
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 81, in rendered_content
+    template = self.resolve_template(self.template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 63, in resolve_template
+    return select_template(template, using=self.using)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader.py", line 42, in select_template
+    return engine.get_template(template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 34, in get_template
+    return Template(self.engine.get_template(template_name), self)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 143, in get_template
+    template, origin = self.find_template(template_name)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 266, in do_extends
+    nodelist = parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 483, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 544, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 57: 'block'. Looking for one of: endblock.
+"GET /wiki/ HTTP/1.1" 500 149197
+Internal Server Error: /wiki/
+Traceback (most recent call last):
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 483, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 544, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 12: 'block'. Looking for one of: endblock.
+"GET /wiki/ HTTP/1.1" 500 154773
+Internal Server Error: /wiki/
+Traceback (most recent call last):
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 483, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 544, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 12: 'block'. Looking for one of: endblock.
+"GET /wiki/ HTTP/1.1" 500 154841
+Internal Server Error: /wiki/
+Traceback (most recent call last):
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\exception.py", line 34, in inner
+    response = get_response(request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 145, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\core\handlers\base.py", line 143, in _get_response
+    response = response.render()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 106, in render
+    self.content = self.rendered_content
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\response.py", line 83, in rendered_content
+    content = template.render(context, self._request)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\backends\django.py", line 61, in render
+    return self.template.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 937, in render
+    bit = node.render_annotated(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 904, in render_annotated
+    return self.render(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 127, in render
+    compiled_parent = self.get_parent(context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 124, in get_parent
+    return self.find_template(parent, context)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 104, in find_template
+    template_name, skip=history,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\engine.py", line 125, in find_template
+    template = loader.get_template(name, skip=skip)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loaders\base.py", line 30, in get_template
+    contents, origin, origin.template_name, self.engine,
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 156, in __init__
+    self.nodelist = self.compile_nodelist()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 194, in compile_nodelist
+    return parser.parse()
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 478, in parse
+    raise self.error(token, e)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 476, in parse
+    compiled_result = compile_func(self, token)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\loader_tags.py", line 209, in do_block
+    nodelist = parser.parse(('endblock',))
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 483, in parse
+    self.unclosed_block_tag(parse_until)
+  File "C:\Users\401930\AppData\Roaming\Python\Python36\site-packages\django\template\base.py", line 544, in unclosed_block_tag
+    raise self.error(token, msg)
+django.template.exceptions.TemplateSyntaxError: Unclosed tag on line 12: 'block'. Looking for one of: endblock.
+"GET /wiki/ HTTP/1.1" 500 154841
+"GET /wiki/ HTTP/1.1" 200 2479
+"GET /static/wiki/style.css HTTP/1.1" 200 1419
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/upload/ HTTP/1.1" 302 0
+"GET /wiki/accounts/login/?next=/wiki/upload/ HTTP/1.1" 200 1783
+"GET /wiki/ HTTP/1.1" 200 2479
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /wiki/ HTTP/1.1" 200 2479
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/ HTTP/1.1" 200 2497
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/ HTTP/1.1" 200 2512
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /static/wiki/style.css HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2204
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /static/wiki/style.css HTTP/1.1" 200 1458
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2204
+"GET /wiki/ HTTP/1.1" 200 2512
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/1/ HTTP/1.1" 200 1828
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/ HTTP/1.1" 200 2512
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\models.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /wiki/ HTTP/1.1" 200 2512
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+"GET /wiki/ HTTP/1.1" 200 2512
+"GET /wiki/1/ HTTP/1.1" 200 1861
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /wiki/1/ HTTP/1.1" 200 1861
+"GET /static/wiki/style.css HTTP/1.1" 304 0
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\wiki\views.py changed, reloading.
+Watching for file changes with StatReloader
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py changed, reloading.
+Watching for file changes with StatReloader
+D:\L3 Year 2\unit 27\DJANGO practice\mysite\mysite\settings.py changed, reloading.

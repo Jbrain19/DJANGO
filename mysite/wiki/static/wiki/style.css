@@ -23,7 +23,7 @@ nav{margin: 5px 0px 0px 0px}
 .wikihome{margin: 0px 100px 10px 300px; 
     border: 1px solid black; 
     font-family: sans-serif;
-    width: 600px;
+    /*width: 500px;*/
     background-color: rgba(247, 238, 238, 0.87);
     }
   
@@ -38,6 +38,8 @@ input{margin: 10px 0px 5px 50px; }
 .home{margin:0px 5px 0px 10px; float: right;}
 .edit{margin: 0px 60px 0px 5px; float: right;}  
 
+.footer {/*border: 1px solid black;*/ text-align: center; margin: 50px 0px 0px 0px}
+
 
   /*text editting page*/      
 textarea{margin: 0px 0px 10px 50px;
@@ -46,7 +48,7 @@ textarea{margin: 0px 0px 10px 50px;
 
 button{text-decoration: none;}
 
-.textedit{margin: 0px 10px 0px 10px ; width: 20px}
+.textedit{margin: 0px 50px 0px 50px ;}
 
 
 /*login/logout page*/
@@ -54,4 +56,5 @@ button{text-decoration: none;}
     width: 500px; padding: 10px;}
 
 /*upload page*/
-.fileup{margin: 10px 100px 0px 100px }
+.fileup{margin: 10px 100px 0px 100px;}
+.fileupload-home{margin: 40px 0px 10px 600px; }
