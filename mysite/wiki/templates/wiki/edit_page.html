@@ -19,13 +19,14 @@
 {{content}}
         </textarea>
 </div>
-        <input type="submit" value="Save"> <!--button to save edited text-->
+<input type="submit" value="Save">
+<!--button to save edited text-->
 
-    </form>
+</form>
 
-    <a class="btn btn-danger" href="{% url 'wiki:detail' page_name %}">
-        Cancel
-    </a>
+<a class="btn btn-danger" href="{% url 'wiki:detail' page_name %}">
+    Cancel
+</a>
 
 
 {% endblock %}

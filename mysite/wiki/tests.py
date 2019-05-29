@@ -1,12 +1,24 @@
 from django.test import TestCase
-
+from wiki.models import Page
 from django.urls import reverse
 
+#Testing the login works
+class Test_login(TestCase):
+        def testlogin(self):
+                response = self.client.get(reverse('wiki:index'))
+                self.assertContains(response, "Wiki Index") 
 
-class test_login:
-   def login (self):
-        response = self.client.get(reverse('wiki:index'))
-        self.assertContains(response, "login")
+#Testing the logout function works
+class Test_logout(TestCase):
+        def testlogout(self):
+                response = self.client.get(reverse('wiki:index'))
+                self.assertContains(response, "logout") 
 
-def test_logout ():
-# Create your tests here.
+
+class Test_URL(TesCase):
+        def  (self)
+                 response = self.client.get(reverse('wiki:index'))
+                self.assertContains(response, "") 
+
+
+

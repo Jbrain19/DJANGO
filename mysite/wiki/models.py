@@ -11,7 +11,7 @@ class Page(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse('people.views.details', args=[str(self.id)])
+        return reverse('people.views.details', args=[str(self.title)])
 
 
 class UserFileUpload (models.Model):

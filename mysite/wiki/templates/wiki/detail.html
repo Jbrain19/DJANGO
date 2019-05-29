@@ -1,7 +1,7 @@
 {% extends "wiki/base.html" %}
 {% load static %}
 {% block content %}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'wiki:index' %}">
         <h2>Wiki Index</h2>
     </a>
@@ -27,7 +27,7 @@
 </div>
 
 <div class="text">
-    {{page.content }}
+    {{page.content | safe }}
 </div>
 
 <!--Allows a user to edit the text-->

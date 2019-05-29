@@ -2,10 +2,10 @@ from django.views import generic
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
-
+from django.http import HttpResponse
+from django.db.models import F
 from .models import Page, UserFileUpload # Imports information from models.py for Page and UserFileUpload
 from .forms import UploadFileForm # Imports information from forms.py for UserFileUpload
-
 import logging
 
 # Get an instance of a logger
@@ -26,6 +26,9 @@ class DetailView(generic.DetailView):
 def view_page(request, pk):
     try:
         page = Page.objects.get(pk=pk)
+        page.counter = F('counter') + 1
+        page.save(update_fields=['counter'])
+        page.refresh_from_db()
         return render(request, "wiki/detail.html",{"page":page})
     except Page.DoesNotExist:
         return render (request, "wiki/create_page.html", {"page_name": pk}) 
