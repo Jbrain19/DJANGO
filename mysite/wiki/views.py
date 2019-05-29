@@ -3,20 +3,13 @@ from django.shortcuts import render
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
 
-from .models import Page, UserFileUpload
-from .forms import UploadFileForm 
+from .models import Page, UserFileUpload # Imports information from models.py for Page and UserFileUpload
+from .forms import UploadFileForm # Imports information from forms.py for UserFileUpload
 
 import logging
 
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
-logger.info("custom logger started")
-def my_view(request, arg1, arg):
-    ...
-    if bad_mojo:
-        # Log an error message
-        logger.error('Something went wrong!')
-
 
 
 class IndexView(generic.ListView):
@@ -59,7 +52,7 @@ def save_page(request, pk):
     except Page.DoesNotExist:
         page =  Page(title=pk, content=content)
     page.save()
-    return redirect ('wiki:detail', pk=pk) #Makes sure that if task fails it will redirect to the content page (detail)
+    return redirect ('wiki:detail', pk=pk) # Makes sure that if task fails it will redirect to the content page (detail)
 
 @login_required(login_url='wiki:login') # Makes sure a login (if not already) is required before continuining
 def upload_file(request):

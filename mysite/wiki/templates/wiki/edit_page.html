@@ -1,11 +1,13 @@
 {% extends 'wiki/base.html' %}
 {% load static %}
+{% load staticfiles %}
 {% block content %}
 {% block contentTitle %}
 <header>
     <h3> Editing {{page_name}}</h3>
 </header>
 {% endblock %}
+
 <div class="textedit">
     <script src="{% static 'tinymce/tinymce.min.js' %}"></script>
     <script>tinymce.init({ selector: '#id_content', plugin: 'autolink' });</script>
