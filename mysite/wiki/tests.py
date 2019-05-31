@@ -22,12 +22,12 @@ class Test_URL(TestCase):
     def setUp(self):
         self.user = User.objects.create_user('TestUser', 'TestUser@gmail.com', 'testingpassword')
 
-        #../wiki/upload. This test that the upload URL works
+        #../wiki/upload. This tests that the upload URL works
     def testuploadURL(self):
         response = self.client.get('/wiki/upload', follow=True)
         self.assertContains(response, "upload")
 
-        #../wiki/page/edit. This test that the edit URL works
+        #../wiki/page/edit. This tests that the edit URL works
     def testeditURL(self):
         self.client.login(username='TestUser', password='TestUserPassword')
         response = self.client.get('/wiki/editing/edit', follow=True)

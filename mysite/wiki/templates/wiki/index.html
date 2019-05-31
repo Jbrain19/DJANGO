@@ -6,12 +6,13 @@
     <a class="navbar-brand" href="#"><h2>Wiki Index</h2></a>
 
     <!--If not logged in, will display Login button. Used to take you to the login in page, where it will require a user name and password-->
-    {% if request.user.is_authenticated %}
+    {% if not request.user.is_authenticated %}
     <div class="login">
         <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a> 
     </div>
     <!--if already logged in, will display logout button. Once pressed will logout user and redirect them to the login page-->
-    {% else %}
+    {% endif %}
+    {% if  request.user.is_authenticated %}
     <div class="logout">
         <a logout_redirect href="{% url 'wiki:logout' %}"  class="btn btn-danger">Logout</a>
     </div>
