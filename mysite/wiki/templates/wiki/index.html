@@ -6,13 +6,12 @@
     <a class="navbar-brand" href="#"><h2>Wiki Index</h2></a>
 
     <!--If not logged in, will display Login button. Used to take you to the login in page, where it will require a user name and password-->
-    {% if not request.user.is_authenticated %}
+    {% if request.user.is_authenticated %}
     <div class="login">
         <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a> 
     </div>
     <!--if already logged in, will display logout button. Once pressed will logout user and redirect them to the login page-->
-    {% endif %}
-    {% if request.user.is_authenticated %}
+    {% else %}
     <div class="logout">
         <a logout_redirect href="{% url 'wiki:logout' %}"  class="btn btn-danger">Logout</a>
     </div>
@@ -34,6 +33,10 @@
         </li>
         {% endfor %}
     </ul>
+
+    {% else %}
+    <p>No pages available</p>
+    {% endif %}
 </div>
 
 <!--Takes a user to the file upload page-->
@@ -44,7 +47,7 @@
         </li>
     </ul>
 </div>
-{% endif %}
+
 
 
 <footer class="footer">
