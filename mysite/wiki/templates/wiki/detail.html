@@ -1,17 +1,18 @@
-{% extends "wiki/base.html" %}
+{% extends "wiki/base.html" %} <!--Links to the base.html so that anything there e.g. links to CSS or Bootstrap will be registerd-->
 {% load static %}
 {% block content %}
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'wiki:index' %}">
         <h2>Wiki Index</h2>
     </a>
-
+    <!--If not logged in, will display Login button. Used to take you to the login in page, where it will require a user name and password-->
     {% if not request.user.is_authenticated %}
     <div class="login">
         <a logout_redirect href="{% url 'wiki:login' %}" class="btn btn-danger">Login</a>
     </div>
 
     {% endif %}
+    <!--if already logged in, will display logout button. Once pressed will logout user and redirect them to the login page-->
     {% if request.user.is_authenticated %}
     <div class="logout">
         <a logout_redirect href="{% url 'wiki:logout' %}" class="btn btn-danger">Logout</a>
@@ -30,7 +31,7 @@
     {{page.content | safe }}
 </div>
 
-<!--Allows a user to edit the text-->
+<!--A button that allows a user to edit the current text. It takes a user to the edit page-->
 <div class="edit">
     <a class="btn btn-primary" href="{% url 'wiki:edit_page' page.id %}"> 
         edit
@@ -44,6 +45,7 @@
     </a>
 </div>
 
+<!--Displays the amount of times a site has been visited. Counts up +1 everytime a user goes on to a page-->
 <footer class="footer">
   {{ Counter.pk | safe}}
   <div class="text-center">This Page has been visited {{page.counter}} times.</div>

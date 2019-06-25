@@ -1,4 +1,4 @@
-{% extends 'wiki/base.html' %}
+{% extends 'wiki/base.html' %} <!--Links to the base.html so that anything there e.g. links to CSS or Bootstrap will be registerd-->
 {% load static %}
 
 
@@ -7,11 +7,13 @@
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="{% url 'wiki:index'  %}"><h2>Wiki Index</h2></a>
 
+    <!--If not logged in, will display Login button. Used to take you to the login in page, where it will require a user name and password-->
     {% if not request.user.is_authenticated %}
     <div class="login">
         <a logout_redirect href="{% url 'wiki:login' %}"  class="btn btn-danger">Login</a>
     </div>
 
+    <!--if already logged in, will display logout button. Once pressed will logout user and redirect them to the login page-->
     {% endif %}
     {% if request.user.is_authenticated %}
     <div class="logout">
@@ -32,7 +34,7 @@
         <form method='POST' enctype='multipart/form-data' action="{% url 'wiki:upload' %}">
             {% csrf_token %}
             {{form}}
-            <input type='submit' value="Upload">
+            <input type='submit' value="Upload"> <!--Used to upload the file displayed (the one the user just added)-->
         </form>
 
     </section>

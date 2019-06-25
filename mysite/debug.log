@@ -43,3 +43,9 @@
 "GET /favicon.ico HTTP/1.1" 404 2204
 "GET /wiki/ HTTP/1.1" 500 170581
 "GET /wiki/ HTTP/1.1" 500 169756
+"GET / HTTP/1.1" 404 2153
+"GET /favicon.ico HTTP/1.1" 404 2204
+"GET / HTTP/1.1" 404 2153
+"GET /favicon.ico HTTP/1.1" 404 2204
+"GET / HTTP/1.1" 404 2153
+"GET /favicon.ico HTTP/1.1" 404 2204

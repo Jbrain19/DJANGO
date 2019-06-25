@@ -1,4 +1,4 @@
-{% extends 'wiki/base.html' %}
+{% extends 'wiki/base.html' %} <!--Links to the base.html so that anything there e.g. links to CSS or Bootstrap will be registerd-->
 {% load static %}
 {% load staticfiles %}
 {% block content %}
@@ -16,14 +16,16 @@
 
         {% csrf_token %}
         <textarea id="id_content" name="content" row="10" cols="40">
-{{content}}
+{{content}}   <!--Used so that all text(content) on the wiki page is displayed in the textbox area to be edited-->
         </textarea>
 </div>
-<input type="submit" value="Save">
+
 <!--button to save edited text-->
+<input type="submit" value="Save">
 
 </form>
 
+<!--Button to cancel all actions and returns user to previous page (wiki content page)-->
 <a class="btn btn-danger" href="{% url 'wiki:detail' page_name %}">
     Cancel
 </a>
